@@ -1,0 +1,8 @@
+{
+  "name": "SAM CORP Blog — Biznes Avtomatlashtirish va 50% Chegirma",
+  "description": "SAM CORP rasmiy blogi va maxsus 50% chegirma taklifi: Telegram botlar va CRM tizimlari orqali biznesni avtomatlashtirish.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
