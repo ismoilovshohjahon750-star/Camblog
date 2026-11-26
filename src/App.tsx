@@ -13,6 +13,7 @@ import { HeroFeaturedStory } from './components/HeroFeaturedStory';
 import { NewsletterDispatchModal } from './components/NewsletterDispatchModal';
 import { OfferCtaBanner } from './components/OfferCtaBanner';
 import { PosterShowcase } from './components/PosterShowcase';
+import { SmartBoardShowcase } from './components/SmartBoardShowcase';
 import { ARTICLES } from './data/articles';
 import type { Article, CategoryId, NewsletterStats } from './types/blog';
 import { filterArticles } from './utils/blogLogic';
@@ -65,6 +66,11 @@ export default function App() {
     []
   );
 
+  const smartBoardArticle = useMemo(
+    () => ARTICLES.find((a) => a.id === 'smartboard-86-interaktiv-doskalar-tizimi'),
+    []
+  );
+
   const filteredArticles = useMemo(
     () => filterArticles(ARTICLES, activeCategory, searchQuery),
     [activeCategory, searchQuery]
@@ -112,6 +118,11 @@ export default function App() {
           searchQuery={searchQuery}
           onSelectArticle={setSelectedArticle}
           onResetFilters={handleResetFilters}
+        />
+
+        <SmartBoardShowcase
+          article={smartBoardArticle}
+          onReadArticle={setSelectedArticle}
         />
 
         <PosterShowcase />

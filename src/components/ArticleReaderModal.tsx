@@ -118,13 +118,23 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
           </div>
 
           {/* Hero Image */}
-          <div className="mt-7 overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900">
-            <div className="aspect-[16/9] w-full">
+          <div
+            className={`mt-7 overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 ${
+              article.gallery && article.gallery.length > 0
+                ? 'bg-neutral-950'
+                : 'bg-neutral-100 dark:bg-neutral-900'
+            }`}
+          >
+            <div className={article.gallery && article.gallery.length > 0 ? 'aspect-[16/8] w-full' : 'aspect-[16/9] w-full'}>
               <ResilientImage
                 src={article.image}
                 alt={article.imageAlt}
                 fallbackTitle={article.title}
-                className="h-full w-full object-cover"
+                className={
+                  article.gallery && article.gallery.length > 0
+                    ? 'h-full w-full object-contain'
+                    : 'h-full w-full object-cover'
+                }
               />
             </div>
           </div>
@@ -207,6 +217,64 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
               </section>
             ))}
           </div>
+
+          {/* Optional Screenshot Gallery */}
+          {article.gallery && article.gallery.length > 0 && (
+            <section className="mt-10 border-t border-neutral-200 pt-8 dark:border-neutral-800">
+              <h2 className="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
+                Tizim interfeysi ko‘rinishlari
+              </h2>
+              <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-3">
+                {article.gallery.map((item) => (
+                  <figure
+                    key={item.src}
+                    className="overflow-hidden rounded-xl border border-neutral-200 bg-[#F8F9FA] dark:border-neutral-800 dark:bg-[#161922]"
+                  >
+                    <div className="aspect-[16/8] w-full bg-neutral-950">
+                      <ResilientImage
+                        src={item.src}
+                        alt={item.alt}
+                        fallbackTitle={item.label}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                    <figcaption className="p-3.5">
+                      <div className="font-display text-xs font-bold text-[#1A73E8] dark:text-[#60A5FA]">
+                        {item.label}
+                      </div>
+                      <p className="mt-1 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">
+                        {item.caption}
+                      </p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Optional Technical Specifications */}
+          {article.specs && article.specs.length > 0 && (
+            <section className="mt-8 rounded-2xl border border-neutral-200 bg-[#F8F9FA] p-6 dark:border-neutral-800 dark:bg-[#161922]">
+              <h2 className="font-display text-lg font-bold text-neutral-900 dark:text-neutral-50">
+                Texnik talablar va moslik
+              </h2>
+              <dl className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {article.specs.map((spec) => (
+                  <div
+                    key={spec.label}
+                    className="rounded-xl border border-neutral-200 bg-white p-3.5 dark:border-neutral-800 dark:bg-[#111318]"
+                  >
+                    <dt className="text-xs font-semibold text-[#1A73E8] dark:text-[#60A5FA]">
+                      {spec.label}
+                    </dt>
+                    <dd className="mt-1 text-sm font-medium text-neutral-800 dark:text-neutral-200">
+                      {spec.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
 
           {/* Step-by-Step Guide */}
           <section className="mt-10 rounded-2xl border border-neutral-200 bg-[#F8F9FA] p-6 sm:p-7 dark:border-neutral-800 dark:bg-[#161922]">

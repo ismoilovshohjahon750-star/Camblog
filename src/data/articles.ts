@@ -69,7 +69,153 @@ export const DISCOUNT_PACKAGES: DiscountPackage[] = [
 export const HERO_FEATURED_IMAGE = '/src/assets/images/samcorp_hero_editorial_1795355645704.jpg';
 export const POSTER_ARTWORK_IMAGE = '/src/assets/images/samcorp_poster_visual_1795355645939.jpg';
 
+export const SMARTBOARD_IMAGES = {
+  desktopDock: '/assets/aistudio/IMG_20261126_213519_ea8c75a1.jpg',
+  moreApps: '/assets/aistudio/IMG_20261126_213546_7e88aefc.jpg',
+  lockedScreen: '/assets/aistudio/IMG_20261126_213429_2cad3006.jpg',
+};
+
 export const ARTICLES: Article[] = [
+  {
+    id: 'smartboard-86-interaktiv-doskalar-tizimi',
+    slug: 'smartboard-86-interaktiv-doskalar-uchun-xavfsiz-boshqaruv-va-launcher',
+    category: 'Yangiliklar',
+    title: 'SmartBoard 86: Interaktiv Doskalar Uchun Xavfsiz Boshqaruv va Zamonaviy Launcher Tizimi',
+    subtitle:
+      'SAM Corp korporativ yechimlari (Versiya 1.0): maktablar, universitetlar va o‘quv markazlaridagi 86 dyuymli 4K Android doskalarni tartibli boshqarish va himoya qilish.',
+    excerpt:
+      'Tanaffus paytida nazoratsiz qoladigan interaktiv doskalarni to‘liq himoyalangan kutish rejimida saqlash, Telegram orqali masofadan dars ochish, 45 daqiqalik suzuvchi taymer va o‘rnatilgan Whiteboard tizimi.',
+    publishedAt: '26 Noyabr, 2026',
+    readTimeMinutes: 6,
+    author: {
+      name: 'Ismoilov Shohjahon',
+      role: 'SAM CORP Tizim Arxitektori',
+    },
+    image: SMARTBOARD_IMAGES.desktopDock,
+    imageAlt: 'SmartBoard 86 minimalist ishchi stoli va shaffof Dock paneli ko‘rinishi',
+    keyTakeaways: [
+      'Blok rejimida oq-qora tog‘ manzarasi orqasida chuqurlik effektli yirik soat ko‘rinadi, pastki panel va tizim navigatsiyasi to‘liq yashiriladi.',
+      'Dars sessiyasi ochilgach frosted glass effektli suzuvchi Dock paneli faollashadi — 4 tagacha ilovani Drag-and-Drop orqali mahkamlash va More Apps menyusidan barcha ilovalarni ochish mumkin.',
+      'Ruxsat etilgan o‘qituvchilar va IT administratorlar doskani Telegram bot orqali masofadan ochishi, 45 daqiqalik taymerni boshqarishi va PIN-kod bilan tizimni himoyalashi mumkin.',
+    ],
+    metrics: [
+      {
+        label: 'Android mosligi',
+        value: '7.0 – 16',
+        context: 'Nougat (API 24) dan eng so‘nggi versiyagacha',
+      },
+      {
+        label: 'Dars taymeri',
+        value: '45 daq',
+        context: '5 daqiqa qolganda ogohlantirish va avtomatik blok',
+      },
+      {
+        label: 'Arxitektura',
+        value: '4K / 64-bit',
+        context: 'arm64-v8a, armeabi-v7a, x86_64, x86 panellar',
+      },
+    ],
+    gallery: [
+      {
+        label: 'Ishchi stol va Dock',
+        src: SMARTBOARD_IMAGES.desktopDock,
+        alt: 'SmartBoard 86 ishchi stoli: tog‘ manzarasi fonidagi soat va pastki frosted glass Dock paneli',
+        caption:
+          'Dars sessiyasi ochilganda faollashadigan minimalist ishchi stol va 4 tagacha ilovani mahkamlaydigan suzuvchi Dock paneli.',
+      },
+      {
+        label: 'Barcha ilovalar (More Apps)',
+        src: SMARTBOARD_IMAGES.moreApps,
+        alt: 'SmartBoard 86 More Apps ilovalar ro‘yxati ekrani',
+        caption:
+          'O‘ng chekkadagi maxsus tugma orqali ochiladigan barcha ilovalar panjarasi — Drag-and-Drop bilan panelga olib chiqish mumkin.',
+      },
+      {
+        label: 'Xavfsiz kutish rejimi',
+        src: SMARTBOARD_IMAGES.lockedScreen,
+        alt: 'SmartBoard 86 App pinned xavfsiz blokirovka kutish rejimi ekrani',
+        caption:
+          'Tanaffus va darsdan tashqari vaqtlardagi xavfsiz blokirovka (App pinned) holati — navigatsiya va begona ilovalarga kirish cheklangan.',
+      },
+    ],
+    specs: [
+      {
+        label: 'Operatsion tizim',
+        value: 'Android 7.0 (API 24) – Android 15 / 16 gacha',
+      },
+      {
+        label: 'Operativ xotira (RAM)',
+        value: 'Minimal 2 GB (4K panellar uchun 4 GB+ tavsiya etiladi)',
+      },
+      {
+        label: 'Protsessor arxitekturasi',
+        value: 'arm64-v8a, armeabi-v7a, x86_64, x86',
+      },
+      {
+        label: 'Ekran formati',
+        value: '86 dyuymgacha katta gorizontal (Landscape) 4K displeylar',
+      },
+      {
+        label: 'Tizim ruxsatlari',
+        value: 'Tarmoq, ilovalar ustida ko‘rsatish, ekranni yoqiq saqlash, avtoyuklash',
+      },
+      {
+        label: 'Xavfsizlik modeli',
+        value: 'PIN-kod himoyasi, yopiq nazorat va begona serverlarsiz ishlash',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Ta’lim muassasalaridagi asosiy muammo va SmartBoard 86 yechimi',
+        paragraphs: [
+          'Maktablar, universitetlar, o‘quv markazlari va konferensiya zallarida o‘rnatilgan katta ekranli (jumladan, 86 dyuymli 4K) Android interaktiv doskalar ko‘pincha tanaffus paytida nazoratsiz qolib ketadi yoki o‘yinlar va begona dasturlar bilan band qilinadi.',
+          'SAM Corp korporativ yechimlari tomonidan ishlab chiqilgan SmartBoard 86 (Versiya 1.0) bu muammoni tubdan hal qiladi: doska tanaffusda to‘liq himoyalangan kutish rejimida saqlanadi, dars boshlanishi bilan esa o‘qituvchiga tezkor va qulay ishchi muhitni taqdim etadi.',
+        ],
+        pullQuote:
+          'SmartBoard 86 doskani tanaffusda himoyalangan kutish rejimida saqlaydi, dars vaqtida esa o‘qituvchiga minimalist va tezkor ishchi muhit beradi.',
+      },
+      {
+        heading: '1. Xavfsiz blokirovka (Kutish) va 2. Minimalist Dock paneli',
+        paragraphs: [
+          'Doska qulflangan holatda ekran o‘chib qolmaydi — oq-qora tog‘ manzarasi fonida tog‘ cho‘qqisi orqasida joylashgan chuqurlik effektli yirik raqamli soat va sana ko‘rinib turadi. Blok rejimida pastki ilovalar paneli va tizim navigatsiyasi yashiriladi: boshqa ilovalarga kirish, sozlamalarni o‘zgartirish yoki tizimdan chiqib ketish to‘liq cheklanadi. Qurilma qayta ishga tushirilganda ham himoya tizimi avtomatik faollashadi.',
+          'Dars sessiyasi ochilgach, ekranning pastki qismida shaffof oyna (frosted glass) effektli suzuvchi panel ishga tushadi. Panelga 4 tagacha eng zarur ilovani mahkamlab qo‘yish, o‘ng chekkadagi tugma orqali barcha ilovalar ro‘yxatini (More Apps) ochish va barmoq bilan Drag-and-Drop orqali ilovalarning o‘rnini almashtirish mumkin. Tanlangan joylashuv xotirada saqlanadi.',
+        ],
+      },
+      {
+        heading: '3. Masofadan Telegram boshqaruvi, Dars taymeri va Whiteboard',
+        paragraphs: [
+          'Ruxsat etilgan o‘qituvchilar va IT administratorlar doskani masofadan turib Telegram bot yoki markazlashtirilgan boshqaruv tizimi orqali boshqarishi mumkin. Darsni ochish, qolgan vaqtni ko‘rish, sessiyani uzaytirish, pauzaga qo‘yish va dars tugagach doskani qayta qulflash bir nechta tugmalar orqali bajariladi.',
+          'Odatiy 45 daqiqalik dars hisoblagichi dars davomida boshqa ilovalar ustida suzuvchi kichik oyna ko‘rinishida qolgan vaqtni eslatib turadi. Tugashiga 5 daqiqa qolganda ogohlantiruvchi ovozli signal beriladi, vaqt tugagach esa doska avtomatik xavfsiz blok rejimiga qaytadi. Shuningdek, tezkor chizish va tushuntirish ishlari uchun alohida to‘liq ekranli interaktiv doska (Whiteboard) rejimi kiritilgan.',
+        ],
+        bulletPoints: [
+          'Markazlashtirilgan nazorat: xonalar, o‘qituvchilar va IT administratorlar ro‘yxatini alohida boshqarish hamda kirish harakatlari jurnalini kuzatish.',
+          'PIN-kod himoyasi: tizim sozlamalari ruxsatsiz o‘zgarishlardan PIN-kod bilan ajratilgan.',
+          'Yopiq maxfiylik tamoyili: qurilmadagi shaxsiy fayllar uchinchi tomon xizmatlariga uzatilmaydi; buyruqlar faqat muassasa sozlagan vakolatli hisoblar doirasida bajariladi.',
+        ],
+      },
+    ],
+    claimSteps: [
+      {
+        step: '01',
+        title: 'Xonalar va doskalarni aniqlang',
+        description:
+          'Muassasangizdagi interaktiv panellar soni va Android versiyalarini @SAMcorpManagerBot ga yuboring.',
+      },
+      {
+        step: '02',
+        title: 'Telegram va PIN sozlash',
+        description:
+          'O‘qituvchilar, IT administratorlar hamda xonalar ro‘yxati tizimga biriktiriladi.',
+      },
+      {
+        step: '03',
+        title: 'Sinov va ishga tushirish',
+        description:
+          'Doskalarga SmartBoard 86 o‘rnatilib, masofaviy boshqaruv va taymer tizimi ishga tushiriladi.',
+      },
+    ],
+    relatedIds: ['samcorp-ekotizim-maqola', 'telegram-botlar-savdo-muloqot', 'chegirma-50-imkoniyat'],
+  },
   {
     id: 'samcorp-ekotizim-maqola',
     slug: 'sam-corp-biznesni-avtomatlashtirish-ekotizimi',

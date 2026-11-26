@@ -25,6 +25,18 @@ export interface DiscountStep {
   description: string;
 }
 
+export interface ArticleGalleryItem {
+  label: string;
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+export interface ArticleSpecItem {
+  label: string;
+  value: string;
+}
+
 export interface Article {
   id: string;
   slug: string;
@@ -43,6 +55,8 @@ export interface Article {
   featured?: boolean;
   keyTakeaways: string[];
   metrics?: ArticleMetric[];
+  gallery?: ArticleGalleryItem[];
+  specs?: ArticleSpecItem[];
   sections: ArticleSection[];
   claimSteps: DiscountStep[];
   relatedIds: string[];
